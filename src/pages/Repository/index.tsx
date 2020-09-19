@@ -1,36 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { useRouteMatch, Link } from 'react-router-dom';
-import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
-import { Header, RepositoryInfo, Issues } from './styles';
-import logoImage from '../../assets/logo.svg';
+import { FiChevronRight, FiChevronLeft } from 'react-icons/fi';
+import { RepositoryInfo, Issues } from './styles';
 import api from '../../services/api';
+import Header from '../../components/Header';
+import { RepositoryTypes, Issue, RepositoryParams } from '../../@types';
 
-interface RepositoryParams {
-  repository: string;
-}
-
-interface Repository {
-  full_name: string;
-  description: string;
-  stargazers_count: number;
-  forks_count: number;
-  open_issues_count: number;
-  owner: {
-    login: string;
-    avatar_url: string;
-  };
-}
-
-interface Issue {
-  id: number;
-  title: string;
-  html_url: string;
-  user: {
-    login: string;
-  };
-}
 const Repository: React.FC = () => {
-  const [repository, setRepository] = useState<Repository | null>(null);
+  const [repository, setRepository] = useState<RepositoryTypes | null>(null);
   const [issues, setIssues] = useState<Issue[]>([]);
 
   const { params } = useRouteMatch<RepositoryParams>();
@@ -58,7 +35,6 @@ const Repository: React.FC = () => {
   return (
     <>
       <Header>
-        <img src={logoImage} alt="Github Explorer" />
         <Link to="/">
           <FiChevronLeft size={16} />
           Voltar
