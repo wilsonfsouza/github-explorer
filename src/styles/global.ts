@@ -10,12 +10,12 @@ export default createGlobalStyle`
     box-sizing: border-box;
   }
   body {
-    background: #F0F0F5 url(${githubBackground}) no-repeat 70% top;
+    background: ${props =>
+    props.theme.colors.background} url(${githubBackground}) no-repeat 70% top;
     -webkit-font-smothing: antialiased;
   }
   body, input, button {
-    font: 16px Roboto, sans-serif;
-
+    font: 16px ${props => props.theme.fonts.paragraph};
   }
   button {
     cursor: pointer;
