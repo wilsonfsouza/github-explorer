@@ -1,29 +1,29 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import Switch from 'react-switch';
-import { ThemeContext } from 'styled-components';
 import { shade } from 'polished';
+import { useTheme } from '../../hooks/theme';
 import { HeaderContainer } from './styles';
 import logoImage from '../../assets/logo.svg';
 
-const Header: React.FC = props => {
-  const { colors } = useContext(ThemeContext);
+const Header: React.FC = ({ children }) => {
+  const { themeState, currentTheme, handleToggleTheme } = useTheme();
+
   return (
     <>
       <HeaderContainer>
-        {/* <FiGithub size={16} /> */}
         <img src={logoImage} alt="Github Eplorer" />
         <Switch
-          onChange={() => { }}
-          checked
+          onChange={handleToggleTheme}
+          checked={themeState === 'dark'}
           checkedIcon={false}
           uncheckedIcon={false}
           height={10}
           width={40}
           handleDiameter={20}
-          onColor={colors.primary}
-          offColor={shade(0.15, colors.secondary)}
+          onColor={currentTheme.colors.primary}
+          offColor={shade(0.15, currentTheme.colors.secondary)}
         />
-        {props.children}
+        {children}
       </HeaderContainer>
     </>
   );
