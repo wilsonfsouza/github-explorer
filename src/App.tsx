@@ -1,25 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import { ThemeProvider } from 'styled-components';
-import light from './styles/themes/light';
-import dark from './styles/themes/dark';
 import GlobalStyle from './styles/global';
 import Routes from './routes';
+import { ThemeManager } from './hooks/theme';
 
 const App: React.FC = () => {
-  const [theme, setTheme] = useState(light);
-  // Could use useCallback
-  const handleToggleTheme = () => {
-    setTheme(theme.title === 'light' ? dark : light);
-  };
   return (
     <>
-      <ThemeProvider theme={theme}>
+      <ThemeManager>
         <BrowserRouter>
           <Routes />
         </BrowserRouter>
         <GlobalStyle />
-      </ThemeProvider>
+      </ThemeManager>
     </>
   );
 };
