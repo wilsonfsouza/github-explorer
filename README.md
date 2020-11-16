@@ -23,8 +23,8 @@
 
 <p align="center">
  <a href="#-about-the-project">About</a> •
- <a href="#-user-stories">User Stories</a> •
- <a href="#-features">Features</a> •
+ <a href="#user-content-️-user-stories">User Stories</a> •
+ <a href="#user-content-️-features">Features</a> •
  <a href="#-layout">Layout</a> •
  <a href="#-how-to-run-the-project">How to run</a> •
  <a href="#-technologies">Technologies</a> •
@@ -35,9 +35,9 @@
 
 ## 💻 About the project
 
-Github Explorer is a project developed to practice React concepts during my [GoStack Coding Bootcamp](https://rocketseat.com.br/). It uses the GitHub API to find repositories you might be interested, allowing the user to browse through their open issues.
+Github Explorer is a project developed to practice React concepts during my [GoStack Coding Bootcamp](https://rocketseat.com.br/). It uses the GitHub API to find repositories you might be interested in, allowing the user to browse through their open issues.
 
-The theming is an additional feature add by me after the conclusion of this project.
+The theming is an additional feature added by me after the conclusion of this project.
 
 ---
 
@@ -47,7 +47,7 @@ The theming is an additional feature add by me after the conclusion of this proj
 - A user can list searched repositories
 - When clicking on a repository, a user can see repository stars, forks, and open issues
 - A user can navigate to a specific issue thread on GitHub by clicking on the card
-- A user is able to switch themes for night reading
+- A user can switch themes for night reading
 - A user must be able to navigate between pages
 
 ---
@@ -59,7 +59,7 @@ The theming is an additional feature add by me after the conclusion of this proj
   - Search bar input gets validated, so no empty searches are allowed
 
 - Repositories
-  - History of searched repositories is displayed on initial page
+  - History of searched repositories is displayed on the initial page
   - Repository card is animated on mouse-over
   - Each repository card display the photo of the repository's owner, `username/repository-name`, and description
   - You can see more information about that repository by clicking on it
@@ -67,7 +67,7 @@ The theming is an additional feature add by me after the conclusion of this proj
 - Repository Information Page
   - You can see the repository stats (stars, forks, and open issues)
   - Each open issue is linked to the open issue on Github, so you can open it on a new tab or click to be forwarded to it
-  - Each open issue card displays issue title followed by the GitHub user who open that issue
+  - Each open issue card displays the issue title followed by the GitHub user who opened that issue
 
 - Theme (*New*)
   - You can switch between light and dark themes
@@ -80,7 +80,7 @@ The theming is an additional feature add by me after the conclusion of this proj
 ## 🎨 Layout
 
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-  <img style="max-width: 1100px;" alt="NextLevelWeek" title="#NextLevelWeek" src="./assets/images/intro.gif" width="100%">
+  <img style="max-width: 1100px;" alt="GitHub Explorer" title="#GitHub-Explorer" src="./assets/images/intro.gif" width="100%">
 </p>
 
 ---
