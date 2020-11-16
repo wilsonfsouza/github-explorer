@@ -14,7 +14,7 @@
 </p>
 
 <h1 align="center">
-    <img alt="GitHub Explorer" title="#GitHubExplorer" src="./src/assets/images/banner.png" />
+    <img alt="GitHub Explorer" title="#GitHubExplorer" src="./assets/images/banner.png" />
 </h1>
 
 <h4 align="center">
