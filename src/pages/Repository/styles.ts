@@ -1,52 +1,53 @@
 import styled from 'styled-components';
 
 export const RepositoryInfo = styled.section`
-  margin-top: 80px;
+  margin-top: 5rem;
 
   header {
     display: flex;
     align-items: center;
 
     img {
-      width: 120px;
-      height: 120px;
+      width: 7.5rem;
+      height: 7.5rem;
       border-radius: 50%;
     }
 
     div {
-      margin-left: 24px;
+      margin-left: 1.5rem;
       flex: 1;
 
       strong {
-        font-size: 36px;
-        columns: #3d3d4d;
+        font-size: 2.25rem;
+        color: ${props => props.theme.colors.title};
       }
 
       p {
-        font-size: 18px;
+        font-size: 1.125rem;
         color: #737380;
-        margin-top: 4px;
+        margin-top: 0.25rem;
       }
     }
   }
 
   ul {
+    margin-top: 0.2rem;
     display: flex;
     list-style: none;
 
     li {
       & + li {
-        margin-left: 80px;
+        margin-left: 5rem;
       }
       strong {
         display: block;
-        font-size: 36px;
-        columns: #3d3d4d;
+        font-size: 2.25rem;
+        color: ${props => props.theme.colors.title};
       }
 
       span {
         display: block;
-        margin-top: 4px;
+        margin-top: 0.25rem;
         color: #6c6c80;
       }
     }
@@ -54,12 +55,12 @@ export const RepositoryInfo = styled.section`
 `;
 
 export const Issues = styled.div`
-  margin-top: 80px;
+  margin-top: 5rem;
   a {
-    background: #fff;
+    background: ${props => props.theme.colors.secondary};
     border-radius: 5px;
     width: 100%;
-    padding: 24px;
+    padding: 1.5rem;
     display: block;
     text-decoration: none;
 
@@ -80,14 +81,14 @@ export const Issues = styled.div`
       flex: 1;
 
       strong {
-        color: #3d3d4d;
+        color: ${props => props.theme.colors.title};
         font-size: 20px;
       }
 
       p {
-        font-size: 18px;
-        color: #a8a8b3;
-        margin-top: 4px;
+        font-size: 1.125rem;
+        color: ${props => props.theme.colors.paragraph};
+        margin-top: 0.25rem;
       }
     }
     svg {

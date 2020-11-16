@@ -6,16 +6,16 @@ interface FormProps {
 }
 
 export const TitleH1 = styled.h1`
-  font-size: 48px;
+  font-size: 3rem;
   color: ${props => props.theme.colors.h1};
-  max-width: 450px;
+  max-width: 510px;
   line-height: 56px;
 
-  margin-top: 80px;
+  margin-top: 5rem;
 `;
 
 export const Form = styled.form<FormProps>`
-  margin-top: 40px;
+  margin-top: 2.5rem;
   max-width: 700px;
 
   display: flex;
@@ -23,7 +23,7 @@ export const Form = styled.form<FormProps>`
   input {
     flex: 1;
     height: 70px;
-    padding: 0 24px;
+    padding: 0 1.5rem;
     border: 0;
     border-radius: 5px 0 0 5px;
     color: ${props => props.theme.colors.inputText};
@@ -33,10 +33,10 @@ export const Form = styled.form<FormProps>`
     ${props =>
     props.hasError &&
     css`
-        border-color: #c53030;
+        border-color: ${props.theme.colors.borderError};
       `}
     &::placeholder {
-      color: #a8a8b3;
+      color: ${props => props.theme.colors.placeholderError};
     }
   }
 
@@ -59,17 +59,17 @@ export const Form = styled.form<FormProps>`
 export const Error = styled.span`
   display: block;
   color: ${props => props.theme.colors.messageError};
-  margin-top: 8px;
+  margin-top: 0.5rem;
 `;
 export const Repositories = styled.div`
-  margin-top: 80px;
+  margin-top: 5rem;
   max-width: 700px;
 
   a {
     background: ${props => props.theme.colors.secondary};
     border-radius: 5px;
     width: 100%;
-    padding: 24px;
+    padding: 1.5rem;
     display: block;
     text-decoration: none;
 
@@ -78,7 +78,7 @@ export const Repositories = styled.div`
     transition: transform 0.2s;
 
     & + a {
-      margin-top: 16px;
+      margin-top: 1rem;
     }
 
     &:hover {
@@ -92,18 +92,18 @@ export const Repositories = styled.div`
     }
 
     div {
-      margin: 0 16px;
+      margin: 0 1rem;
       flex: 1;
 
       strong {
         color: ${props => props.theme.colors.title};
-        font-size: 20px;
+        font-size: 1.25rem;
       }
 
       p {
-        font-size: 18px;
+        font-size: 1.125rem;
         color: ${props => props.theme.colors.paragraph};
-        margin-top: 4px;
+        margin-top: 0.25rem;
       }
     }
     svg {
