@@ -127,7 +127,7 @@ The following tools were used in this project:
 -   **[Styled-components](https://styled-components.com/)**
 -   **[Polished](https://polished.js.org/)**
 
-> See the file  [package.json](https://github.com/wilsonfsouza/github-explorer/blob/main/package.json)
+> See the file  [package.json](https://github.com/wilsonfsouza/github-explorer/blob/master/package.json)
 
 #### [](https://github.com/wilsonfsouza/github-explorer#utilities)**Utilities**
 
