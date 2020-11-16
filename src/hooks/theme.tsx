@@ -1,4 +1,12 @@
-import React, { createContext, useState, useCallback, useContext } from 'react';
+import React, {
+  createContext,
+  useState,
+  useCallback,
+  useContext,
+  useEffect,
+  Dispatch,
+  SetStateAction,
+} from 'react';
 import { DefaultTheme, ThemeProvider } from 'styled-components';
 import { ThemeName, themes } from '../styles/themes/themes';
 
@@ -12,13 +20,38 @@ const ThemeManagerContext = createContext<ThemeManagerContextProps>(
   {} as ThemeManagerContextProps,
 );
 
+type PersistedStateProps<T> = [T, Dispatch<SetStateAction<T>>];
+
+function usePersistedState<T>(
+  key: string,
+  initialState: T,
+): PersistedStateProps<T> {
+  const [state, setState] = useState(() => {
+    const storageValue = localStorage.getItem(key);
+
+    if (storageValue) {
+      return JSON.parse(storageValue);
+    }
+    return initialState;
+  });
+
+  useEffect(() => {
+    localStorage.setItem(key, JSON.stringify(state));
+  }, [key, state]);
+
+  return [state, setState];
+}
+
 const ThemeManager: React.FunctionComponent = ({ children }) => {
-  const [themeState, setThemeState] = useState<ThemeName>('light');
+  const [themeState, setThemeState] = usePersistedState<ThemeName>(
+    'THEME',
+    'light',
+  );
   const currentTheme = themes[themeState];
 
   const handleToggleTheme = useCallback(() => {
     setThemeState(themeState === 'light' ? 'dark' : 'light');
-  }, [themeState]);
+  }, [themeState, setThemeState]);
 
   return (
     <ThemeManagerContext.Provider
