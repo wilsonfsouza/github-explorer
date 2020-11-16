@@ -15,10 +15,12 @@ declare module 'styled-components' {
       borderError: string;
       messageError: string;
       placeholderError: string;
+      returnhover: string;
     };
     fonts: {
       title: string;
       paragraph: string;
+      size: string;
     };
   }
 }
