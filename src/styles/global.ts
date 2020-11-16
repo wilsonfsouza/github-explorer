@@ -8,13 +8,17 @@ export default createGlobalStyle`
     outline: 0;
     box-sizing: border-box;
   }
+  *, body, input, button {
+    transition: color .25s ease-out;
+  }
   body {
     background: ${props =>
     props.theme.colors.background} url(${githubBackground}) no-repeat 70% top;
     -webkit-font-smothing: antialiased;
   }
   body, input, button {
-    font: 16px ${props => props.theme.fonts.paragraph};
+    font-size: ${props => props.theme.fonts.size};
+    font-family: ${props => props.theme.fonts.paragraph};
   }
   button {
     cursor: pointer;
