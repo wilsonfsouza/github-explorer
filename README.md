@@ -41,7 +41,7 @@ The theming is an additional feature added by me after the conclusion of this pr
 
 ---
 
-## ⚙️ User Stories
+## ⭐ User Stories
 
 - A user can search for a GitHub repository by typing the `username/repository-name`
 - A user can list searched repositories
