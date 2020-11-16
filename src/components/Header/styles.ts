@@ -13,7 +13,7 @@ export const HeaderContainer = styled.header`
     transition: color 0.2s;
 
     &:hover {
-      color: #666;
+      color: ${props => props.theme.colors.returnhover};
     }
 
     svg {
