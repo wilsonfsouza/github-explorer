@@ -1,6 +1,6 @@
 
 <p align="center">
-    <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/wilsonfsouza/github-explorer">
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/wilsonfsouza/github-explorer">
   <a href="https://github.com/wilsonfsouza/happy-frontend-web/commits/main">
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/wilsonfsouza/github-explorer">
   </a>
@@ -18,7 +18,7 @@
 </h1>
 
 <h4 align="center">
-	Happy (In Progress)
+	GitHub explorer
 </h4>
 
 <p align="center">
