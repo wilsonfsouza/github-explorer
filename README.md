@@ -41,7 +41,7 @@ The theming is an additional feature added by me after the conclusion of this pr
 
 ---
 
-## ⚙️ User Stories
+## ⭐ User Stories
 
 - A user can search for a GitHub repository by typing the `username/repository-name`
 - A user can list searched repositories
@@ -79,22 +79,24 @@ The theming is an additional feature added by me after the conclusion of this pr
 
 ## 🎨 Layout
 
-<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
+<p align="center" style="display: inline-flex; align-items: flex-start; justify-content: center;">
   <img style="max-width: 1100px;" alt="GitHub Explorer" title="#GitHub-Explorer" src="./assets/images/intro.gif" width="100%">
 </p>
 
 ### Web
 
-<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-  <img style="margin-right: 5px; max-width: 400px;" alt="Landing Page Light Theme" title="#LandingPageLightTheme" src="./assets/images/light-intro.png" width="100%">
+<p align="center" style="display: inline-flex; align-items: flex-start; justify-content: center;">
+  <img style="margin-right: 5px; max-width: 400px;" alt="Landing Page Light Theme" title="#LandingPageLightTheme" src="./assets/images/light-home.png" width="100%">
 
   <img style="max-width: 400px;" alt="RepoPage Light Theme" title="#RepoPageLightTheme" src="./assets/images/light-info.png" width="100%">
 </p>
+
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
   <img style="margin-right: 5px; max-width: 400px;" alt="Landing Page Dark Theme" title="#LandingPageDarkTheme" src="./assets/images/dark-intro.png" width="100%">
 
   <img style="max-width: 400px;" alt="RepoPage Dark Theme" title="#RepoPageDarkTheme" src="./assets/images/dark-info.png" width="100%">
 </p>
+
 ---
 
 ## 🚀 How to run the project
