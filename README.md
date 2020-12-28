@@ -35,9 +35,7 @@
 
 ## 💻 About the project
 
-Github Explorer is a project developed to practice React concepts during my [GoStack Coding Bootcamp](https://rocketseat.com.br/). It uses the GitHub API to find repositories you might be interested in, allowing the user to browse through their open issues.
-
-The theming is an additional feature added by me after the conclusion of this project.
+Github Explorer is a React project that uses the GitHub API to find repositories you might be interested in, allowing the user to browse through their open issues.
 
 ---
 
@@ -72,9 +70,6 @@ The theming is an additional feature added by me after the conclusion of this pr
 - Theme (*New*)
   - You can switch between light and dark themes
   - The theme is a persisted state with its mode saved on local storage, so it will not be lost on page refresh
-
-- Responsive Design on Mobile (*soon*)
-  - Media queries using styled-components and react context
 ---
 
 ## 🎨 Layout
