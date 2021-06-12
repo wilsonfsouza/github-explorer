@@ -37,6 +37,17 @@
 
 Github Explorer is a React project that uses the GitHub API to find repositories you might be interested in, allowing the user to browse through their open issues.
 
+### Live Preview:
+
+<a href="https://hungry-mahavira-6f0d9b.netlify.app/" target="_blank"><img alt="Netlify" src="https://img.shields.io/badge/netlify%20-%23000000.svg?&style=for-the-badge&logo=netlify&logoColor=00ac9e"/></a>
+
+
+### Layout:
+
+Layout designed by Tiago Luchtenberg:
+
+<a href="https://www.figma.com/file/M25kKsazXcMv54lFaWNqoN/Github-Explorer-UI?node-id=0%3A1" target="_blank"><img alt="Figma" src="https://img.shields.io/badge/figma%20-%23F24E1E.svg?&style=for-the-badge&logo=figma&logoColor=white"/></a>
+
 ---
 
 ## ⭐ User Stories
