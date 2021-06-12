@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { useRouteMatch, Link } from 'react-router-dom';
-import { FiChevronRight, FiChevronLeft } from 'react-icons/fi';
+import { FiChevronLeft } from 'react-icons/fi';
 import { RepositoryInfo, Issues } from './styles';
 import api from '../../services/api';
 import Header from '../../components/Header';
 import { RepositoryTypes, Issue, RepositoryParams } from '../../@types';
+import { IssueCard } from '../../components/IssueCard';
 
 const Repository: React.FC = () => {
   const [repository, setRepository] = useState<RepositoryTypes | null>(null);
@@ -72,13 +73,7 @@ const Repository: React.FC = () => {
 
       <Issues>
         {issues.map(issue => (
-          <a key={issue.id} href={issue.html_url}>
-            <div>
-              <strong>{issue.title}</strong>
-              <p>{issue.user.login}</p>
-            </div>
-            <FiChevronRight size={20} />
-          </a>
+          <IssueCard key={issue.id} issue={issue} />
         ))}
       </Issues>
     </>

@@ -106,7 +106,7 @@ export const Issues = styled.div`
     margin-top: 5rem;
     `}
 
-  a {
+  /* a {
     background: ${props => props.theme.colors.secondary};
     border-radius: 5px;
     width: 100%;
@@ -157,5 +157,5 @@ export const Issues = styled.div`
       margin-left: auto;
       color: #cbcbd6;
     }
-  }
+  } */
 `;
