@@ -1,9 +1,20 @@
 import styled from 'styled-components';
+import { mediaQueries } from '../../styles/mediaQueries';
 
 export const HeaderContainer = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  figure {
+    width: 36px;
+    overflow: hidden;
+    margin: 0;
+
+    ${mediaQueries('md')`
+      width: 215px;
+    `}
+  }
 
   a {
     display: flex;

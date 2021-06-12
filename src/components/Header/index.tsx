@@ -11,7 +11,9 @@ const Header: React.FC = ({ children }) => {
   return (
     <>
       <HeaderContainer>
-        <img src={logoImage} alt="Github Eplorer" />
+        <figure>
+          <img src={logoImage} alt="Github Eplorer" />
+        </figure>
         <Switch
           onChange={handleToggleTheme}
           checked={themeState === 'dark'}

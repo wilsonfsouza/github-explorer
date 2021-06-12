@@ -50,13 +50,13 @@ const Dashboard: React.FC = () => {
   return (
     <>
       <Header />
-      <TitleH1>Search for Github Repositories</TitleH1>
+      <TitleH1>Search for GitHub Repositories</TitleH1>
       <Form hasError={!!inputError} onSubmit={handleAddRepository}>
         <input
           value={newRepo}
           onChange={e => setNewRepo(e.target.value)}
           type="text"
-          placeholder="Type the repository name"
+          placeholder="Try facebook/react"
         />
         <button type="submit">Search</button>
       </Form>
