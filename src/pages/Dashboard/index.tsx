@@ -1,11 +1,10 @@
 import React, { useState, FormEvent, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { FiChevronRight } from 'react-icons/fi';
 import api from '../../services/api';
 
-import { TitleH1, Form, Repositories, Error } from './styles';
+import { Title, Form, Repositories, Error } from './styles';
 import Header from '../../components/Header';
 import { RepositoryTypes } from '../../@types';
+import { RepositoryCard } from '../../components/RepositoryCard';
 
 const Dashboard: React.FC = () => {
   const [newRepo, setNewRepo] = useState('');
@@ -50,7 +49,7 @@ const Dashboard: React.FC = () => {
   return (
     <>
       <Header />
-      <TitleH1>Search for GitHub Repositories</TitleH1>
+      <Title>Search for GitHub Repositories</Title>
       <Form hasError={!!inputError} onSubmit={handleAddRepository}>
         <input
           value={newRepo}
@@ -62,24 +61,9 @@ const Dashboard: React.FC = () => {
       </Form>
       {inputError && <Error>{inputError}</Error>}
       <Repositories>
-        {repositories.map(repository => {
-          return (
-            <Link
-              key={repository.full_name}
-              to={`/repository/${repository.full_name}`}
-            >
-              <img
-                src={repository.owner.avatar_url}
-                alt={repository.owner.login}
-              />
-              <div>
-                <strong>{repository.full_name}</strong>
-                <p>{repository.description}</p>
-              </div>
-              <FiChevronRight size={20} />
-            </Link>
-          );
-        })}
+        {repositories.map(repository => (
+          <RepositoryCard key={repository.full_name} repository={repository} />
+        ))}
       </Repositories>
     </>
   );

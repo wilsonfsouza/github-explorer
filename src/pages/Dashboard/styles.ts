@@ -6,7 +6,7 @@ interface FormProps {
   hasError: boolean;
 }
 
-export const TitleH1 = styled.h1`
+export const Title = styled.h1`
   font-size: 2rem;
   color: ${props => props.theme.colors.h1};
   max-width: 510px;
@@ -80,8 +80,7 @@ export const Error = styled.span`
 export const Repositories = styled.div`
   margin-top: 5rem;
   max-width: 700px;
-
-  a {
+  /* a {
     background: ${props => props.theme.colors.secondary};
     border-radius: 5px;
     width: 100%;
@@ -148,5 +147,5 @@ export const Repositories = styled.div`
       position: relative;
     `}
     }
-  }
+  } */
 `;
