@@ -6,7 +6,7 @@ import Header from '../../components/Header';
 import { RepositoryTypes } from '../../@types';
 import { RepositoryCard } from '../../components/RepositoryCard';
 
-const Dashboard: React.FC = () => {
+export default function Dashboard() {
   const [newRepo, setNewRepo] = useState('');
   const [inputError, setInputError] = useState('');
   const [repositories, setRepositories] = useState<RepositoryTypes[]>(() => {
@@ -67,6 +67,4 @@ const Dashboard: React.FC = () => {
       </Repositories>
     </>
   );
-};
-
-export default Dashboard;
+}
