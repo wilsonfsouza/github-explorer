@@ -3,13 +3,24 @@ import api from '../../services/api';
 
 import { Title, Form, Repositories, Error } from './styles';
 import Header from '../../components/Header';
-import { RepositoryTypes } from '../../@types';
 import { RepositoryCard } from '../../components/RepositoryCard';
+
+interface Repository {
+  full_name: string;
+  description: string;
+  stargazers_count?: number;
+  forks_count?: number;
+  open_issues_count?: number;
+  owner: {
+    login: string;
+    avatar_url: string;
+  };
+}
 
 export default function Dashboard() {
   const [newRepo, setNewRepo] = useState('');
   const [inputError, setInputError] = useState('');
-  const [repositories, setRepositories] = useState<RepositoryTypes[]>(() => {
+  const [repositories, setRepositories] = useState<Repository[]>(() => {
     const storageRepositories = localStorage.getItem(
       '@GithubExplorer:repositories',
     );
@@ -36,7 +47,7 @@ export default function Dashboard() {
     }
 
     try {
-      const response = await api.get<RepositoryTypes>(`repos/${newRepo}`);
+      const response = await api.get<Repository>(`repos/${newRepo}`);
       const repository = response.data;
       setRepositories([...repositories, repository]);
       setNewRepo('');

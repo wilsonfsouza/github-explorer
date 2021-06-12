@@ -1,11 +1,20 @@
 import React from 'react';
 import { FiChevronRight } from 'react-icons/fi';
-import { RepositoryTypes } from '../../@types';
 import { Container } from './styles';
 
-interface RepositoryCardProps {
-  repository: RepositoryTypes;
+interface Repository {
+  full_name: string;
+  description: string;
+  owner: {
+    login: string;
+    avatar_url: string;
+  };
 }
+
+interface RepositoryCardProps {
+  repository: Repository;
+}
+
 export function RepositoryCard({ repository }: RepositoryCardProps) {
   return (
     <Container to={`/repository/${repository.full_name}`}>

@@ -1,7 +1,15 @@
 import React from 'react';
 import { FiChevronRight } from 'react-icons/fi';
-import { Issue } from '../../@types';
 import { Container } from './styles';
+
+interface Issue {
+  id: number;
+  title: string;
+  html_url: string;
+  user: {
+    login: string;
+  };
+}
 
 interface IssueCardProps {
   issue: Issue;

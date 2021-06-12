@@ -4,11 +4,35 @@ import { FiChevronLeft } from 'react-icons/fi';
 import { RepositoryInfo, Issues } from './styles';
 import api from '../../services/api';
 import Header from '../../components/Header';
-import { RepositoryTypes, Issue, RepositoryParams } from '../../@types';
 import { IssueCard } from '../../components/IssueCard';
 
+interface Issue {
+  id: number;
+  title: string;
+  html_url: string;
+  user: {
+    login: string;
+  };
+}
+
+interface Repository {
+  full_name: string;
+  description: string;
+  stargazers_count?: number;
+  forks_count?: number;
+  open_issues_count?: number;
+  owner: {
+    login: string;
+    avatar_url: string;
+  };
+}
+
+interface RepositoryParams {
+  repository: string;
+}
+
 export default function Repository() {
-  const [repository, setRepository] = useState<RepositoryTypes | null>(null);
+  const [repository, setRepository] = useState<Repository | null>(null);
   const [issues, setIssues] = useState<Issue[]>([]);
 
   const { params } = useRouteMatch<RepositoryParams>();
