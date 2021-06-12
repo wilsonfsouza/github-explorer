@@ -2,7 +2,6 @@ import React, {
   createContext,
   useState,
   useCallback,
-  useContext,
   useEffect,
   Dispatch,
   SetStateAction,
@@ -16,7 +15,7 @@ interface ThemeManagerContextProps {
   handleToggleTheme(): void;
 }
 
-const ThemeManagerContext = createContext<ThemeManagerContextProps>(
+export const ThemeManagerContext = createContext<ThemeManagerContextProps>(
   {} as ThemeManagerContextProps,
 );
 
@@ -42,7 +41,7 @@ function usePersistedState<T>(
   return [state, setState];
 }
 
-const ThemeManager: React.FunctionComponent = ({ children }) => {
+export const ThemeManager: React.FunctionComponent = ({ children }) => {
   const [themeState, setThemeState] = usePersistedState<ThemeName>(
     'THEME',
     'light',
@@ -65,13 +64,3 @@ const ThemeManager: React.FunctionComponent = ({ children }) => {
     </ThemeManagerContext.Provider>
   );
 };
-
-function useTheme(): ThemeManagerContextProps {
-  const context = useContext(ThemeManagerContext);
-
-  if (!context) {
-    throw new Error('useTheme must be used within ThemeManagerContext');
-  }
-  return context;
-}
-export { ThemeManager, useTheme };

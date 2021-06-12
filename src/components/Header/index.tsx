@@ -1,7 +1,7 @@
 import React from 'react';
 import Switch from 'react-switch';
 import { shade } from 'polished';
-import { useTheme } from '../../hooks/theme';
+import { useTheme } from '../../hooks/useTheme';
 import { HeaderContainer } from './styles';
 import logoImage from '../../assets/logo.svg';
 
