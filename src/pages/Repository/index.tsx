@@ -7,7 +7,7 @@ import Header from '../../components/Header';
 import { RepositoryTypes, Issue, RepositoryParams } from '../../@types';
 import { IssueCard } from '../../components/IssueCard';
 
-const Repository: React.FC = () => {
+export default function Repository() {
   const [repository, setRepository] = useState<RepositoryTypes | null>(null);
   const [issues, setIssues] = useState<Issue[]>([]);
 
@@ -78,6 +78,4 @@ const Repository: React.FC = () => {
       </Issues>
     </>
   );
-};
-
-export default Repository;
+}
